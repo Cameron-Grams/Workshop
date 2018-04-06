@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import MapContainer from './containers/MapContainer/MapContainer'; 
+import ContactForm from './containers/ContactForm/ContactForm'; 
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-          <MapContainer /> 
+          <ContactForm /> 
       </div>
     );
   }

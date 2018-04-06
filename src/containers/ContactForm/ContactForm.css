@@ -1,0 +1,15 @@
+.css-contactFormDiv{
+    width: 30%;
+    border: 1px solid blue;
+    margin: 5% auto;
+    text-align: left;
+}
+
+.css-actualForm{
+    margin: 10px;
+}
+
+.css-messageInput{
+    width: 250px;
+    height: 150px;
+}
