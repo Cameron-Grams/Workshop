@@ -1,5 +1,6 @@
 import React from 'react';
 import './ContactForm.css';
+import { endpoint } from '../../config/config';
 
 class ContactForm extends React.Component{
     constructor( props ) {
@@ -22,9 +23,31 @@ class ContactForm extends React.Component{
       }
     
       handleSubmit( event ){
-        console.log( 'A name was submitted: ' + this.state.email );
+        console.log( 'A name was submitted: ' + this.state.name );
+        const data = { 
+          name: this.state.name,
+          email: this.state.email,
+          message: this.state.message
+        }; 
+        fetch( `http://${ endpoint }/contact`, {
+            method: 'POST', 
+            body: JSON.stringify( data ), 
+            headers: new Headers({
+              'Content-Type': 'application/json'
+            } )
+        } ).then( res => res.json() )
+        .catch( error => console.error('Error:', error ))
+        .then( response => console.log('Success:', response ));
         event.preventDefault();
       }
+
+
+
+
+
+
+
+
     
       render() {
         return (

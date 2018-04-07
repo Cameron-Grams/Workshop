@@ -1,0 +1,6 @@
+These are the useful references for the components: 
+
+https://www.fullstackreact.com/articles/how-to-write-a-google-maps-react-component/ )
+
+https://www.npmjs.com/package/react-google-maps
+
